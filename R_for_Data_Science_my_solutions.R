@@ -18,3 +18,17 @@ ggplot(data = mpg) +
 
 ggplot(data = mpg) +
   geom_point(mapping = aes(x = displ, y = hwy), shape = 3, color = "pink", fill = "white", stroke = 2)
+
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  facet_grid(. ~ cyl)
+
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  facet_grid(drv ~ .)
+
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = drv, y = cyl)) +
+  facet_grid(. ~ cyl)
+
+
